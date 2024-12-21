@@ -3,171 +3,64 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Portfolio of Bodanapu Saileela, a Senior DevOps Engineer specializing in AWS, Python, Docker, Kubernetes, Terraform, and CI/CD pipelines.">
-    <meta name="author" content="Bodanapu Saileela">
-    <meta name="keywords" content="DevOps Engineer, AWS, CI/CD, Docker, Kubernetes, Terraform, Cloud Engineering, Portfolio">
-    <title>DevOps Engineer Portfolio - Bodanapu Saileela</title>
+    <title>AWS Services Diagram</title>
     <style>
-        /* Global styles */
         body {
             font-family: Arial, sans-serif;
+            background-color: #f4f4f9;
+            text-align: center;
             margin: 0;
             padding: 0;
-            background-color: #f4f4f9;
-            color: #333;
         }
-
-
-        header {
-            background-color: #4CAF50;
+        h1 {
+            background-color: #232F3E;
             color: white;
             padding: 20px;
+        }
+        .aws-services {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            padding: 20px;
+        }
+        .service-card {
+            margin: 10px;
             text-align: center;
+            width: 150px;
         }
-
-
-        nav {
-            background: #333;
-            color: white;
-            text-align: center;
-            padding: 10px 0;
+        .service-card img {
+            width: 100px;
+            height: 100px;
         }
-
-
-        nav a {
-            color: white;
-            margin: 0 15px;
-            text-decoration: none;
-            font-weight: bold;
-        }
-
-
-        nav a:hover {
-            text-decoration: underline;
-        }
-
-
-        .container {
-            padding: 20px;
-            max-width: 1200px;
-            margin: auto;
-        }
-
-
-        .card {
-            background: white;
-            padding: 20px;
-            margin: 20px 0;
-            border-radius: 8px;
-            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-        }
-
-
-        .card ul {
-            list-style: none;
-            padding: 0;
-        }
-
-
-        .card ul li {
-            margin: 10px 0;
-        }
-
-
-        footer {
-            text-align: center;
-            padding: 20px;
-            background: #333;
-            color: white;
-            position: fixed;
-            bottom: 0;
-            width: 100%;
-        }
-
-
-        footer a {
-            color: #4CAF50;
-            text-decoration: none;
-        }
-
-
-        footer a:hover {
-            text-decoration: underline;
-        }
-
-
-        @media (max-width: 768px) {
-            nav {
-                font-size: 14px;
-            }
-            .container {
-                padding: 10px;
-            }
+        .service-card p {
+            margin-top: 10px;
+            color: #232F3E;
         }
     </style>
 </head>
 <body>
-    <header>
-        <h1>Bodanapu Saileela - DevOps Engineer</h1>
-        <p>Building resilient, scalable, and automated cloud solutions.</p>
-    </header>
 
+    <h1>AWS Services Overview</h1>
 
-    <nav>
-        <a href="#about">About</a>
-        <a href="#skills">Skills</a>
-        <a href="#projects">Projects</a>
-        <a href="#contact">Contact</a>
-    </nav>
-
-
-    <div class="container">
-        <!-- About Section -->
-        <section id="about" class="card">
-            <h2>About Me</h2>
-            <p>I am a Senior DevOps Engineer with 8 years of experience specializing in cloud infrastructure, automation, and CI/CD pipelines. Passionate about streamlining development processes and deploying scalable applications in cloud environments.</p>
-        </section>
-
-
-        <!-- Skills Section -->
-        <section id="skills" class="card">
-            <h2>Skills</h2>
-            <ul>
-                <li><strong>Cloud Platforms:</strong> AWS, Azure</li>
-                <li><strong>Containerization:</strong> Docker, Kubernetes</li>
-                <li><strong>CI/CD Tools:</strong> Jenkins, GitHub Actions, ArgoCD</li>
-                <li><strong>Infrastructure as Code:</strong> Terraform, Ansible</li>
-                <li><strong>Scripting:</strong> Python, Bash</li>
-            </ul>
-        </section>
-
-
-        <!-- Projects Section -->
-        <section id="projects" class="card">
-            <h2>Projects</h2>
-            <ul>
-                <li><strong>Travel Web Application:</strong> Built a CI/CD pipeline using Jenkins, Docker, and Kubernetes to automate deployments.</li>
-                <li><strong>E-Commerce Platform:</strong> Automated infrastructure deployment with Terraform and Ansible, reducing deployment time by 50%.</li>
-                <li><strong>Cloud Monitoring System:</strong> Set up AWS CloudWatch, Prometheus, and Grafana for real-time monitoring and alerting.</li>
-                <li><strong>Serverless Application:</strong> Deployed a serverless API using AWS Lambda, API Gateway, and DynamoDB.</li>
-            </ul>
-        </section>
-
-
-        <!-- Contact Section -->
-        <section id="contact" class="card">
-            <h2>Contact</h2>
-            <p>Email: <a href="mailto:bodanapu.saileela@example.com">bodanapu.saileela@example.com</a></p>
-            <p>LinkedIn: <a href="https://www.linkedin.com/in/bodanapu-saileela/" target="_blank">linkedin.com/in/bodanapu-saileela</a></p>
-            <p>GitHub: <a href="https://github.com/bodanapu-saileela" target="_blank">github.com/bodanapu-saileela</a></p>
-        </section>
+    <div class="aws-services">
+        <!-- Example AWS Services Icons -->
+        <div class="service-card">
+            <img src="path/to/aws-s3-icon.png" alt="AWS S3">
+            <p>AWS S3</p>
+        </div>
+        <div class="service-card">
+            <img src="path/to/aws-ec2-icon.png" alt="AWS EC2">
+            <p>AWS EC2</p>
+        </div>
+        <div class="service-card">
+            <img src="path/to/aws-lambda-icon.png" alt="AWS Lambda">
+            <p>AWS Lambda</p>
+        </div>
+        <div class="service-card">
+            <img src="path/to/aws-rds-icon.png" alt="AWS RDS">
+            <p>AWS RDS</p>
+        </div>
     </div>
 
-
-    <footer>
-        <p>&copy; 2024 Bodanapu Saileela. All rights reserved. | <a href="#about">Back to Top</a></p>
-    </footer>
 </body>
 </html>
-
-
