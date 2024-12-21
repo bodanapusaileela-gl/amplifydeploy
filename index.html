@@ -3,64 +3,153 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AWS Services Diagram</title>
+    <meta name="description" content="A coffee shop offering delicious coffees, teas, and sandwiches at great prices.">
+    <meta name="author" content="Coffee Shop">
+    <title>Welcome to Coffee Shop</title>
     <style>
+        /* Global styles */
         body {
             font-family: Arial, sans-serif;
-            background-color: #f4f4f9;
-            text-align: center;
             margin: 0;
             padding: 0;
+            background-color: #f4f4f9;
+            color: #333;
         }
-        h1 {
-            background-color: #232F3E;
+        header {
+            background-color: #6f4f37;
             color: white;
             padding: 20px;
-        }
-        .aws-services {
-            display: flex;
-            justify-content: center;
-            flex-wrap: wrap;
-            padding: 20px;
-        }
-        .service-card {
-            margin: 10px;
             text-align: center;
-            width: 150px;
         }
-        .service-card img {
-            width: 100px;
-            height: 100px;
+        nav {
+            background: #333;
+            color: white;
+            text-align: center;
+            padding: 10px 0;
         }
-        .service-card p {
-            margin-top: 10px;
-            color: #232F3E;
+        nav a {
+            color: white;
+            margin: 0 15px;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        nav a:hover {
+            text-decoration: underline;
+        }
+        .container {
+            padding: 20px;
+            max-width: 1200px;
+            margin: auto;
+        }
+        .menu {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+        }
+        .item {
+            background: white;
+            padding: 20px;
+            margin: 10px;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            width: 30%;
+            text-align: center;
+        }
+        .item img {
+            max-width: 100%;
+            border-radius: 8px;
+        }
+        .location {
+            background-color: #6f4f37;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+        footer {
+            text-align: center;
+            padding: 20px;
+            background: #333;
+            color: white;
         }
     </style>
 </head>
 <body>
+    <header>
+        <h1>Welcome to Our Coffee Shop</h1>
+        <p>Delicious Coffee, Tea, and Sandwiches at Great Prices</p>
+    </header>
 
-    <h1>AWS Services Overview</h1>
+    <nav>
+        <a href="#coffee">Coffee</a>
+        <a href="#tea">Tea</a>
+        <a href="#sandwiches">Sandwiches</a>
+        <a href="#location">Location</a>
+    </nav>
 
-    <div class="aws-services">
-        <!-- Example AWS Services Icons -->
-        <div class="service-card">
-            <img src="path/to/aws-s3-icon.png" alt="AWS S3">
-            <p>AWS S3</p>
-        </div>
-        <div class="service-card">
-            <img src="path/to/aws-ec2-icon.png" alt="AWS EC2">
-            <p>AWS EC2</p>
-        </div>
-        <div class="service-card">
-            <img src="path/to/aws-lambda-icon.png" alt="AWS Lambda">
-            <p>AWS Lambda</p>
-        </div>
-        <div class="service-card">
-            <img src="path/to/aws-rds-icon.png" alt="AWS RDS">
-            <p>AWS RDS</p>
-        </div>
+    <div class="container">
+        <section id="coffee" class="menu">
+            <div class="item">
+                <img src="https://via.placeholder.com/300x200" alt="Coffee 1">
+                <h3>Espresso</h3>
+                <p>Cost: $2.50 - Best quality, smooth taste!</p>
+            </div>
+            <div class="item">
+                <img src="https://via.placeholder.com/300x200" alt="Coffee 2">
+                <h3>Cappuccino</h3>
+                <p>Cost: $3.00 - Low cost, but delicious!</p>
+            </div>
+            <div class="item">
+                <img src="https://via.placeholder.com/300x200" alt="Coffee 3">
+                <h3>Latte</h3>
+                <p>Cost: $3.50 - Tasty and creamy coffee.</p>
+            </div>
+        </section>
+
+        <section id="tea" class="menu">
+            <div class="item">
+                <img src="https://via.placeholder.com/300x200" alt="Tea 1">
+                <h3>Green Tea</h3>
+                <p>Cost: $1.50 - Fresh and energizing!</p>
+            </div>
+            <div class="item">
+                <img src="https://via.placeholder.com/300x200" alt="Tea 2">
+                <h3>Black Tea</h3>
+                <p>Cost: $2.00 - Classic taste, full of flavor!</p>
+            </div>
+            <div class="item">
+                <img src="https://via.placeholder.com/300x200" alt="Tea 3">
+                <h3>Herbal Tea</h3>
+                <p>Cost: $2.50 - Refreshing and soothing.</p>
+            </div>
+        </section>
+
+        <section id="sandwiches" class="menu">
+            <div class="item">
+                <img src="https://via.placeholder.com/300x200" alt="Sandwich 1">
+                <h3>Grilled Chicken Sandwich</h3>
+                <p>Cost: $5.00 - Fresh and flavorful!</p>
+            </div>
+            <div class="item">
+                <img src="https://via.placeholder.com/300x200" alt="Sandwich 2">
+                <h3>Veggie Sandwich</h3>
+                <p>Cost: $4.00 - Healthy and tasty!</p>
+            </div>
+            <div class="item">
+                <img src="https://via.placeholder.com/300x200" alt="Sandwich 3">
+                <h3>Turkey Sandwich</h3>
+                <p>Cost: $5.50 - Savory and delicious.</p>
+            </div>
+        </section>
+
+        <section id="location" class="location">
+            <h2>Visit Us!</h2>
+            <p>Our coffee shop is located in Ganapavaram and Guntur districts.</p>
+            <p>We are open every day from 8 AM to 8 PM.</p>
+        </section>
     </div>
 
+    <footer>
+        <p>&copy; 2024 Coffee Shop. All rights reserved.</p>
+    </footer>
 </body>
 </html>
