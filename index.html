@@ -26,6 +26,7 @@
         }
         .menu {
             display: flex;
+            flex-wrap: wrap;
             justify-content: center;
             margin: 20px;
         }
@@ -61,10 +62,19 @@
             font-weight: bold;
             color: #e74c3c;
         }
-        .menu-list {
-            display: none;
-            margin-top: 20px;
-            text-align: center;
+        /* Responsive design */
+        @media (max-width: 768px) {
+            .menu-item {
+                width: 180px;
+            }
+        }
+        @media (max-width: 480px) {
+            header h1 {
+                font-size: 24px;
+            }
+            .menu-item {
+                width: 160px;
+            }
         }
         .location {
             text-align: center;
@@ -85,24 +95,28 @@
 <div class="menu">
     <!-- Coffee -->
     <div class="menu-item" onclick="toggleMenu('coffee')">
+        <img src="https://www.shutterstock.com/shutterstock/photos/2500190129/display_1500/stock-photo-coffee-mug-and-grinded-coffee-beans-concept-photography-isolated-on-white-background-2500190129.jpg" alt="Coffee">
         <h3>Coffee</h3>
         <p>Click to view Coffee List</p>
     </div>
     
     <!-- Tea -->
     <div class="menu-item" onclick="toggleMenu('tea')">
+        <img src="https://www.earth.com/assets/_next/image/?url=https%3A%2F%2Fcff2.earth.com%2Fuploads%2F2024%2F02%2F08140346%2Fdrinking-tea_every-day_delays-aging_mint-tea_1m-1400x850.jpg&w=1200&q=75" alt="Tea">
         <h3>Tea</h3>
         <p>Click to view Tea List</p>
     </div>
     
     <!-- Sandwich -->
     <div class="menu-item" onclick="toggleMenu('sandwich')">
+        <img src="https://www.southernliving.com/thmb/TW2iJ6-7F-BAy35Q_EYW5wnIHGI=/750x0/filters:no_upscale():max_bytes(150000):strip_icc():format(webp)/Ham_Sandwich_011-1-49227336bc074513aaf8fdbde440eafe.jpg" alt="Sandwich">
         <h3>Sandwich</h3>
         <p>Click to view Sandwich List</p>
     </div>
     
     <!-- Puff -->
     <div class="menu-item" onclick="toggleMenu('puff')">
+        <img src="https://carveyourcraving.com/wp-content/uploads/2021/11/veg-puff-recipe.jpg" alt="Puff">
         <h3>Puff</h3>
         <p>Click to view Puff List</p>
     </div>
