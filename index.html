@@ -26,7 +26,6 @@
         }
         .menu {
             display: flex;
-            flex-wrap: wrap;
             justify-content: center;
             margin: 20px;
         }
@@ -40,6 +39,7 @@
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
             text-align: center;
             transition: transform 0.3s ease-in-out;
+            cursor: pointer;
         }
         .menu-item:hover {
             transform: scale(1.05);
@@ -61,19 +61,10 @@
             font-weight: bold;
             color: #e74c3c;
         }
-        /* Responsive design */
-        @media (max-width: 768px) {
-            .menu-item {
-                width: 180px;
-            }
-        }
-        @media (max-width: 480px) {
-            header h1 {
-                font-size: 24px;
-            }
-            .menu-item {
-                width: 160px;
-            }
+        .menu-list {
+            display: none;
+            margin-top: 20px;
+            text-align: center;
         }
         .location {
             text-align: center;
@@ -93,42 +84,94 @@
 
 <div class="menu">
     <!-- Coffee -->
-    <div class="menu-item">
-        <img src="https://www.shutterstock.com/shutterstock/photos/2500190129/display_1500/stock-photo-coffee-mug-and-grinded-coffee-beans-concept-photography-isolated-on-white-background-2500190129.jpg" alt="Coffee">
+    <div class="menu-item" onclick="toggleMenu('coffee')">
         <h3>Coffee</h3>
-        <p>Freshly brewed coffee made from the finest beans.</p>
-        <p class="price">₹10 - ₹50</p>
+        <p>Click to view Coffee List</p>
     </div>
     
     <!-- Tea -->
-    <div class="menu-item">
-        <img src="https://www.earth.com/assets/_next/image/?url=https%3A%2F%2Fcff2.earth.com%2Fuploads%2F2024%2F02%2F08140346%2Fdrinking-tea_every-day_delays-aging_mint-tea_1m-1400x850.jpg&w=1200&q=75" alt="Tea">
+    <div class="menu-item" onclick="toggleMenu('tea')">
         <h3>Tea</h3>
-        <p>Refreshing hot tea to soothe your senses.</p>
-        <p class="price">₹10 - ₹50</p>
+        <p>Click to view Tea List</p>
     </div>
     
     <!-- Sandwich -->
-    <div class="menu-item">
-        <img src="https://www.southernliving.com/thmb/TW2iJ6-7F-BAy35Q_EYW5wnIHGI=/750x0/filters:no_upscale():max_bytes(150000):strip_icc():format(webp)/Ham_Sandwich_011-1-49227336bc074513aaf8fdbde440eafe.jpg" alt="Sandwich">
+    <div class="menu-item" onclick="toggleMenu('sandwich')">
         <h3>Sandwich</h3>
-        <p>Deliciously packed with fresh veggies and cheese.</p>
-        <p class="price">₹10 - ₹50</p>
+        <p>Click to view Sandwich List</p>
     </div>
     
     <!-- Puff -->
-    <div class="menu-item">
-        <img src="https://carveyourcraving.com/wp-content/uploads/2021/11/veg-puff-recipe.jpg" alt="Puff">
+    <div class="menu-item" onclick="toggleMenu('puff')">
         <h3>Puff</h3>
-        <p>Crispy puff pastry filled with savory fillings.</p>
-        <p class="price">₹10 - ₹50</p>
+        <p>Click to view Puff List</p>
     </div>
+</div>
+
+<!-- Coffee List -->
+<div id="coffee" class="menu-list">
+    <h2>Coffee List</h2>
+    <ul>
+        <li>Cappuccino - ₹30</li>
+        <li>Latte - ₹40</li>
+        <li>Espresso - ₹20</li>
+        <li>Americano - ₹25</li>
+    </ul>
+</div>
+
+<!-- Tea List -->
+<div id="tea" class="menu-list">
+    <h2>Tea List</h2>
+    <ul>
+        <li>Green Tea - ₹10</li>
+        <li>Black Tea - ₹15</li>
+        <li>Chai - ₹12</li>
+        <li>Lemon Tea - ₹18</li>
+    </ul>
+</div>
+
+<!-- Sandwich List -->
+<div id="sandwich" class="menu-list">
+    <h2>Sandwich List</h2>
+    <ul>
+        <li>Veg Sandwich - ₹20</li>
+        <li>Cheese Sandwich - ₹25</li>
+        <li>Grilled Sandwich - ₹30</li>
+        <li>Chicken Sandwich - ₹35</li>
+    </ul>
+</div>
+
+<!-- Puff List -->
+<div id="puff" class="menu-list">
+    <h2>Puff List</h2>
+    <ul>
+        <li>Veg Puff - ₹15</li>
+        <li>Paneer Puff - ₹20</li>
+        <li>Chicken Puff - ₹25</li>
+    </ul>
 </div>
 
 <!-- Location Section -->
 <div class="location">
     <p><strong>Location:</strong> Ganapavaram, Andhra Pradesh 522619</p>
 </div>
+
+<script>
+    // Function to toggle the visibility of menu lists
+    function toggleMenu(category) {
+        // Hide all menu lists
+        const menuLists = document.querySelectorAll('.menu-list');
+        menuLists.forEach(list => {
+            list.style.display = 'none';
+        });
+
+        // Show the selected menu list
+        const selectedMenu = document.getElementById(category);
+        if (selectedMenu) {
+            selectedMenu.style.display = 'block';
+        }
+    }
+</script>
 
 </body>
 </html>
